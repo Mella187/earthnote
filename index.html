@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" style="--s: 1; --g: 0.9;"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#7a6757">
+<title>Daily Geology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&amp;family=Source+Serif+4:ital,wght@0,400;0,500;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --glaze: #f4f2ee; --ink: #34302b; --muted: #6c6258; --rule: #d6cfc5;
+    --clay: #7a6757; --clay-ink: #f6f1e9;
+    --fact: #7a6757; --event: #5f4a3a; --quiz: #5d6a70;
+    --good: #46664d; --bad: #96473a;
+    color-scheme: light;
+  }
+  html { font-size: calc(16px * var(--s, 1)); }
+  html, body { overscroll-behavior: none; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; background: var(--clay); color: var(--ink); }
+  body { font-family: "Source Serif 4", "Iowan Old Style", Georgia, serif; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; }
+  .page { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; }
+  .glaze {
+    flex: 1; display: flex; align-items: center;
+    padding: max(calc(1.5rem * var(--g, 1)), env(safe-area-inset-top)) 1rem calc(2.25rem * var(--g, 1));
+    background-color: var(--glaze);
+    background-image: radial-gradient(circle at 45.4% 55.7%, rgba(110,116,124,0.32) 0, rgba(110,116,124,0.32) 0.8px, transparent 1.2px), radial-gradient(circle at 50.8% 58.4%, rgba(110,116,124,0.40) 0, rgba(110,116,124,0.40) 0.6px, transparent 1.0px), radial-gradient(circle at 47.7% 60.9%, rgba(110,116,124,0.25) 0, rgba(110,116,124,0.25) 0.6px, transparent 1.0px), radial-gradient(circle at 44.9% 15.6%, rgba(110,116,124,0.40) 0, rgba(110,116,124,0.40) 0.5px, transparent 0.9px), radial-gradient(circle at 96.3% 94.6%, rgba(110,116,124,0.40) 0, rgba(110,116,124,0.40) 0.6px, transparent 1.0px), radial-gradient(circle at 3.4% 52.7%, rgba(110,116,124,0.25) 0, rgba(110,116,124,0.25) 0.5px, transparent 0.9px), radial-gradient(circle at 20.3% 25.2%, rgba(110,116,124,0.32) 0, rgba(110,116,124,0.32) 0.5px, transparent 0.9px), radial-gradient(circle at 33.3% 58.7%, rgba(110,116,124,0.40) 0, rgba(110,116,124,0.40) 0.6px, transparent 1.0px), radial-gradient(circle at 24.4% 30.2%, rgba(110,116,124,0.40) 0, rgba(110,116,124,0.40) 0.5px, transparent 0.9px), radial-gradient(circle at 10.2% 64.9%, rgba(110,116,124,0.40) 0, rgba(110,116,124,0.40) 0.8px, transparent 1.2px), radial-gradient(circle at 97.6% 82.7%, rgba(110,116,124,0.32) 0, rgba(110,116,124,0.32) 0.7px, transparent 1.1px), radial-gradient(circle at 74.8% 51.2%, rgba(110,116,124,0.25) 0, rgba(110,116,124,0.25) 0.5px, transparent 0.9px), radial-gradient(circle at 56.1% 12.4%, rgba(110,116,124,0.32) 0, rgba(110,116,124,0.32) 0.5px, transparent 0.9px), radial-gradient(circle at 39.1% 94.0%, rgba(110,116,124,0.25) 0, rgba(110,116,124,0.25) 0.5px, transparent 0.9px), radial-gradient(circle at 22.1% 89.4%, rgba(110,116,124,0.32) 0, rgba(110,116,124,0.32) 0.8px, transparent 1.2px), radial-gradient(circle at 96.1% 40.2%, rgba(110,116,124,0.40) 0, rgba(110,116,124,0.40) 0.5px, transparent 0.9px), radial-gradient(circle at 54.6% 35.2%, rgba(110,116,124,0.25) 0, rgba(110,116,124,0.25) 0.7px, transparent 1.1px), radial-gradient(circle at 51.0% 35.0%, rgba(110,116,124,0.25) 0, rgba(110,116,124,0.25) 0.8px, transparent 1.2px), radial-gradient(circle at 95.5% 12.0%, rgba(110,116,124,0.40) 0, rgba(110,116,124,0.40) 0.8px, transparent 1.2px), radial-gradient(circle at 23.6% 35.6%, rgba(110,116,124,0.32) 0, rgba(110,116,124,0.32) 0.8px, transparent 1.2px), radial-gradient(circle at 90.1% 54.1%, rgba(110,116,124,0.32) 0, rgba(110,116,124,0.32) 0.6px, transparent 1.0px), radial-gradient(circle at 95.8% 23.1%, rgba(110,116,124,0.40) 0, rgba(110,116,124,0.40) 0.8px, transparent 1.2px), radial-gradient(circle at 78.1% 56.0%, rgba(110,116,124,0.40) 0, rgba(110,116,124,0.40) 0.6px, transparent 1.0px), radial-gradient(circle at 66.7% 30.6%, rgba(110,116,124,0.32) 0, rgba(110,116,124,0.32) 0.6px, transparent 1.0px), radial-gradient(circle at 94.0% 47.4%, rgba(110,116,124,0.32) 0, rgba(110,116,124,0.32) 0.6px, transparent 1.0px), radial-gradient(circle at 74.6% 58.4%, rgba(110,116,124,0.32) 0, rgba(110,116,124,0.32) 0.8px, transparent 1.2px), radial-gradient(circle at 80.8% 83.5%, rgba(110,116,124,0.40) 0, rgba(110,116,124,0.40) 0.5px, transparent 0.9px), radial-gradient(circle at 92.0% 37.3%, rgba(110,116,124,0.32) 0, rgba(110,116,124,0.32) 0.6px, transparent 1.0px);
+    background-size: 233px 233px, 317px 317px;
+  }
+  .glaze .inner { width: 100%; max-width: 30rem; margin: 0 auto; }
+  .clay {
+    background: var(--clay); color: var(--clay-ink);
+    padding: calc(1.5rem * var(--g, 1)) 1rem max(calc(1.5rem * var(--g, 1)), env(safe-area-inset-bottom));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.22);
+  }
+  .clay .inner { max-width: 30rem; margin: 0 auto; text-align: center; }
+  .bottom { font-family: "Inter", system-ui, sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
+  .credit { margin-top: 0.55rem; font-family: "Inter", system-ui, sans-serif; font-size: 0.8rem; letter-spacing: 0.04em; opacity: 0.88; }
+  .dateline { display: flex; justify-content: space-between; gap: 1rem; padding: 0 0.4rem calc(2.8rem * var(--g, 1)); font-family: "Inter", system-ui, sans-serif; font-size: 0.76rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); }
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  .card { animation: rise 0.8s ease both; padding: 0.25rem 0.4rem 0; }
+  .hd { padding-bottom: 0.83rem; border-bottom: 1px solid var(--rule); }
+  .bd { padding-top: calc(1.5rem * var(--g, 1)); }
+  .meta { margin: 0 0 calc(3.25rem * var(--g, 1)); }
+  .kind { display: inline-block; font-family: "Inter", system-ui, sans-serif; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--clay-ink); background: var(--clay); padding: 0.45rem 0.85rem; border-radius: 999px; }
+  .kind.fact { background: var(--fact); } .kind.event { background: var(--event); } .kind.quiz { background: var(--quiz); } .kind.birthday { background: var(--event); }
+  h1.long { font-size: calc(clamp(2.33rem, 10vw, 2.83rem) - 0.667rem); }
+  h1 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; font-size: clamp(2.33rem, 10vw, 2.83rem); line-height: 1.14; margin: 0; }
+  .year { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; font-size: 2.57rem; line-height: 1; margin: 0 0 0.5rem; color: var(--event); }
+  .body { font-size: 1.2rem; line-height: 1.65; margin: 0; }
+  .options { margin: 0; padding: 0; list-style: none; }
+  .options li { margin: 0 0 calc(0.7rem * var(--g, 1)); }
+  .options li:last-child { margin-bottom: 0; }
+  .options button { all: unset; box-sizing: border-box; width: 100%; min-height: calc(3.6rem * var(--g, 1)); display: flex; align-items: center; gap: 0.9rem; padding: 0.85rem 1rem; cursor: pointer; font-size: 1.18rem; line-height: 1.35; background: rgba(255,255,255,0.7); border: 1px solid var(--rule); border-radius: 14px; transition: background .25s, border-color .25s, color .25s; }
+  .options button:focus-visible { outline: 2px solid var(--clay); outline-offset: 2px; }
+  .options .letter { flex: none; width: 1.9rem; height: 1.9rem; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--rule); font-family: "Inter", system-ui, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .options button:active:not([disabled]) { background: rgba(122,103,87,0.14); }
+  .options button[disabled] { cursor: default; color: var(--muted); }
+  .options button.correct { color: var(--good); border-color: var(--good); background: rgba(70,102,77,0.12); }
+  .options button.correct .letter { border-color: var(--good); color: var(--good); }
+  .options button.wrong { color: var(--bad); border-color: var(--bad); background: rgba(150,71,58,0.08); }
+  .options button.wrong .letter { border-color: var(--bad); color: var(--bad); }
+  .explain { margin: calc(1.3rem * var(--g, 1)) 0 0; padding-top: calc(1.2rem * var(--g, 1)); border-top: 1px solid var(--rule); font-size: 1.1rem; line-height: 1.6; opacity: 0; visibility: hidden; transition: opacity .6s ease; }
+    .explain.show { opacity: 1; visibility: visible; }
+  .explain .verdict { display: block; font-family: "Inter", system-ui, sans-serif; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.5rem; color: var(--clay); }
+  @media (prefers-reduced-motion: reduce) { .card { animation: none; } .explain { transition: none; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <section class="glaze">
+    <div class="inner">
+      <div class="dateline"><span id="dedication"></span><span id="date">Monday 16 November</span></div>
+      <article id="card" class="card" aria-live="polite" data-kind="fact" style=""><div class="hd"><div class="meta"><span class="kind fact">Fun fact</span></div><h1>Rust written in stone</h1></div><div class="bd"><p class="body">Banded iron formations, striped layers of red and grey rock, record a turning point in Earth's history. About 2.4 billion years ago, oxygen released by early life began to accumulate in the oceans and atmosphere.</p></div></article>
+    </div>
+  </section>
+  <footer class="clay">
+    <div class="inner">
+      <div class="bottom">A note from the Earth, daily</div>
+      <div class="credit">Made by Mella with ♥</div>
+    </div>
+  </footer>
+</div>
+<script>
+
+
+/* ------------------------------------------------------------------
+   CONFIG
+------------------------------------------------------------------ */
+const DEDICATION = "";   // e.g. "For Elena". Leave empty to hide.
+
+/* ------------------------------------------------------------------
+   CONTENT BANK
+   Add or edit entries freely. Every fact and date should be verified
+   against a reliable source before the mug goes to print.
+------------------------------------------------------------------ */
+const FACTS = [
+  { title: "A solid heart of iron",
+    text: "At the centre of the Earth sits a solid ball of iron and nickel, about seventy percent the width of the Moon. Despite temperatures comparable to the surface of the Sun, immense pressure keeps it solid." },
+  { title: "The oldest fragments",
+    text: "The oldest known pieces of Earth are tiny zircon crystals from the Jack Hills of Western Australia. They are roughly 4.4 billion years old, formed within the first few hundred million years of the planet's history." },
+  { title: "Diamonds from the deep",
+    text: "Most natural diamonds form more than 150 kilometres below the surface. They are carried upward in rare, fast-moving volcanic eruptions of a rock called kimberlite." },
+  { title: "A mountain range still rising",
+    text: "The Himalaya continue to grow by a few millimetres each year, as the Indian plate presses steadily into Asia. The collision began roughly fifty million years ago." },
+  { title: "A slow-motion ocean",
+    text: "Along the Mid-Atlantic Ridge, new crust is created as the plates drift apart. The Atlantic widens by about two and a half centimetres a year, roughly the pace at which fingernails grow." },
+  { title: "Rust written in stone",
+    text: "Banded iron formations, striped layers of red and grey rock, record a turning point in Earth's history. About 2.4 billion years ago, oxygen released by early life began to accumulate in the oceans and atmosphere." },
+  { title: "Volcanic glass",
+    text: "Obsidian forms when lava cools too quickly for crystals to grow. The result is a natural glass with such a fine edge that it has been used for blades since the Stone Age." },
+  { title: "The measure of hardness",
+    text: "In 1812 the German mineralogist Friedrich Mohs proposed a scale of ten reference minerals, from soft talc to diamond. It remains in use because a mineral can be tested simply by what it will scratch." },
+  { title: "The white cliffs",
+    text: "The chalk of Dover is composed largely of the microscopic plates of marine algae called coccolithophores. Billions of them settled on a warm sea floor over millions of years." },
+  { title: "The deepest lake",
+    text: "Lake Baikal in Siberia holds more than a fifth of the world's unfrozen fresh water. At over 1,600 metres, it is the deepest lake on Earth and among the oldest, at some 25 million years." },
+  { title: "From limestone to marble",
+    text: "Marble is limestone transformed by heat and pressure deep within the crust. The quarries of Carrara in Tuscany have supplied sculptors, Michelangelo among them, for more than two thousand years." },
+  { title: "Light held in resin",
+    text: "Amber is fossilised tree resin, often tens of millions of years old. It sometimes preserves insects, seeds and feathers in extraordinary detail." }
+];
+
+const QUIZ = [
+  { q: "Which mineral sits at the top of the Mohs hardness scale?",
+    options: ["Quartz", "Corundum", "Diamond"], answer: 2,
+    explain: "Diamond is ranked ten on the Mohs scale. Corundum, which includes ruby and sapphire, is ranked nine." },
+  { q: "Which layer of the Earth lies between the crust and the core?",
+    options: ["The mantle", "The lithosphere", "The outer core"], answer: 0,
+    explain: "The mantle makes up about eighty percent of the planet's volume and lies between the crust and the outer core." },
+  { q: "Granite belongs to which family of rocks?",
+    options: ["Sedimentary", "Igneous", "Metamorphic"], answer: 1,
+    explain: "Granite is an igneous rock. It crystallises slowly from magma deep beneath the surface." },
+  { q: "Who proposed the theory of continental drift in 1912?",
+    options: ["James Hutton", "Charles Lyell", "Alfred Wegener"], answer: 2,
+    explain: "Alfred Wegener presented the idea in 1912. It gained wide acceptance only decades later, with the theory of plate tectonics." },
+  { q: "Which ring of volcanoes and earthquake zones surrounds the Pacific Ocean?",
+    options: ["The Ring of Fire", "The Mid-Ocean Belt", "The Pacific Arc"], answer: 0,
+    explain: "The Ring of Fire traces the boundaries of several tectonic plates and hosts most of the world's earthquakes and active volcanoes." },
+  { q: "Which type of rock is formed by heat and pressure acting on existing rock?",
+    options: ["Igneous", "Clastic", "Metamorphic"], answer: 2,
+    explain: "Metamorphic rocks, such as marble and slate, are transformed without fully melting." },
+  { q: "Which group of minerals is the most abundant in Earth's crust?",
+    options: ["Feldspars", "Micas", "Olivines"], answer: 0,
+    explain: "Feldspars make up roughly half of the crust. Quartz, though familiar, is considerably less abundant." },
+  { q: "Approximately how old is the Earth?",
+    options: ["2.5 billion years", "4.54 billion years", "13.8 billion years"], answer: 1,
+    explain: "Earth is about 4.54 billion years old. The figure of 13.8 billion years is the age of the universe." },
+  { q: "Which Scottish naturalist is celebrated for developing the idea of deep time?",
+    options: ["Hugh Miller", "Roderick Murchison", "James Hutton"], answer: 2,
+    explain: "James Hutton argued in the 1780s that the Earth is shaped by slow, continuous processes over immense spans of time." }
+];
+
+// Keys are "MM-DD".
+const EVENTS = {
+  "01-06": { year: 1912, title: "Wegener presents continental drift",
+    text: "In Frankfurt, the German meteorologist Alfred Wegener gave the first public presentation of his theory that the continents had once been joined and had slowly moved apart." },
+  "01-12": { year: 2010, title: "The Haiti earthquake",
+    text: "A magnitude 7.0 earthquake struck near Port-au-Prince. It was a shallow rupture on a fault system that runs through the Caribbean plate boundary." },
+  "03-01": { year: 1872, title: "Yellowstone becomes the first national park",
+    text: "The United States established Yellowstone, set above one of the largest volcanic systems on the continent, as the world's first national park." },
+  "03-11": { year: 2011, title: "The Tōhoku earthquake",
+    text: "A magnitude 9.1 earthquake ruptured the plate boundary off the coast of Japan. It shifted the seabed by several metres and generated a tsunami that crossed the Pacific." },
+  "03-27": { year: 1964, title: "The Great Alaska earthquake",
+    text: "A magnitude 9.2 earthquake struck Prince William Sound, the second most powerful ever recorded. Its study helped establish the theory of plate tectonics." },
+  "04-10": { year: 1815, title: "Mount Tambora erupts",
+    text: "The largest volcanic eruption in recorded history took place in Indonesia. The following year, 1816, became known in Europe and North America as the year without a summer." },
+  "04-18": { year: 1906, title: "The San Francisco earthquake",
+    text: "A rupture of roughly 480 kilometres along the San Andreas Fault shook northern California. It prompted the first thorough scientific study of an earthquake's mechanics." },
+  "05-18": { year: 1980, title: "Mount St. Helens erupts",
+    text: "A landslide on the volcano's north flank released a lateral blast in Washington State. It remains the most closely studied eruption in the history of the United States." },
+  "05-22": { year: 1960, title: "The Valdivia earthquake",
+    text: "A magnitude 9.5 earthquake struck southern Chile. It is the most powerful earthquake ever recorded by instruments." },
+  "06-15": { year: 1991, title: "Mount Pinatubo erupts",
+    text: "The Philippine volcano produced one of the largest eruptions of the twentieth century. The sulphur aerosols it injected into the stratosphere cooled global temperatures by around half a degree for about two years." },
+  "08-27": { year: 1883, title: "Krakatoa's final eruption",
+    text: "The Indonesian volcano destroyed most of its island in a series of explosions. The sound was heard thousands of kilometres away, and the atmospheric waves circled the globe several times." },
+  "09-01": { year: 1923, title: "The Great Kantō earthquake",
+    text: "A magnitude 7.9 earthquake struck the Tokyo and Yokohama region, leading to major advances in earthquake-resistant engineering in Japan." },
+  "11-01": { year: 1755, title: "The Lisbon earthquake",
+    text: "On All Saints' Day, a great earthquake and tsunami devastated Lisbon. It prompted early scientific inquiry into the causes of earthquakes and shaped Enlightenment thought." },
+  "11-14": { year: 1963, title: "Surtsey emerges from the sea",
+    text: "An eruption off the south coast of Iceland began building a new island. Surtsey has since been protected as a natural laboratory for studying how life colonises new land." },
+  "12-26": { year: 2004, title: "The Indian Ocean earthquake",
+    text: "A magnitude 9.1 earthquake off the coast of Sumatra generated a tsunami that reached shores across the Indian Ocean. It led to the creation of an international tsunami warning system for the region." }
+};
+
+
+/* One card for every calendar day. Days not listed here fall back to the pool above. */
+const CALENDAR = {
+ "06-25": {
+  "type": "birthday",
+  "title": "Happy birthday, Laurie",
+  "text": "Today the note from Earth is a simple one. The most beautiful things are shaped slowly, by time and care, and they only grow richer with the years. Wishing you a wonderful day and a year as lasting and luminous as the finest stone."
+ },
+ "01-01": {
+  "type": "event",
+  "year": "2024",
+  "title": "The Noto Peninsula earthquake",
+  "text": "A magnitude 7.5 earthquake struck central Japan on New Year's Day. Along the north coast of the Noto Peninsula the land rose by as much as four metres, moving the shoreline some 200 metres seaward in places and exposing more than four square kilometres of new land."
+ },
+ "01-02": {
+  "type": "fact",
+  "title": "The sea that nearly vanished",
+  "text": "Around six million years ago the Mediterranean was cut off from the Atlantic and largely dried out. The evaporation left salt deposits up to two kilometres thick beneath today's seabed, before the Atlantic broke through and refilled the basin."
+ },
+ "01-03": {
+  "type": "quiz",
+  "q": "Which rock is built largely from the shells and skeletons of marine organisms?",
+  "options": [
+   "Limestone",
+   "Granite",
+   "Basalt"
+  ],
+  "answer": 0,
+  "explain": "Limestone is mostly calcium carbonate, much of it from the remains of shells and corals that settled on ancient sea floors."
+ },
+ "01-04": {
+  "type": "fact",
+  "title": "Gold from colliding stars",
+  "text": "Heavy elements such as gold are thought to form when neutron stars collide. The gold in a ring may therefore be older than the Sun and the Earth themselves."
+ },
+ "01-05": {
+  "type": "quiz",
+  "q": "Which mineral gives many granites their pink colour?",
+  "options": [
+   "Potassium feldspar",
+   "Mica",
+   "Olivine"
+  ],
+  "answer": 0,
+  "explain": "Potassium feldspar, also known as orthoclase, tints granite pink or red. Mica adds the dark, glittering flakes."
+ },
+ "01-06": {
+  "type": "event",
+  "year": "1912",
+  "title": "Wegener presents continental drift",
+  "text": "At a meeting in Frankfurt, the German scientist Alfred Wegener first presented his hypothesis that the continents had once been joined and had drifted apart. He pointed to matching coastlines, fossils and rock formations on opposite sides of the Atlantic."
+ },
+ "01-07": {
+  "type": "fact",
+  "title": "Wood turned to stone",
+  "text": "In Arizona's Petrified Forest, trees that fell about 225 million years ago were buried quickly and slowly replaced by silica, atom by atom. The stone keeps the grain and rings of the wood, coloured by traces of iron and manganese."
+ },
+ "01-08": {
+  "type": "quiz",
+  "q": "What was the name of the supercontinent that held almost all of the land about 300 million years ago?",
+  "options": [
+   "Gondwana",
+   "Pangaea",
+   "Laurasia"
+  ],
+  "answer": 1,
+  "explain": "Pangaea began to break apart roughly 175 million years ago into two great landmasses, Laurasia in the north and Gondwana in the south."
+ },
+ "01-09": {
+  "type": "fact",
+  "title": "The Giant's Causeway",
+  "text": "On the coast of Northern Ireland, some 40,000 interlocking basalt columns, most of them hexagonal, formed about 60 million years ago. They appeared as thick flows of lava cooled and cracked into regular prisms."
+ },
+ "01-10": {
+  "type": "quiz",
+  "q": "What is molten rock called once it has erupted onto the surface?",
+  "options": [
+   "Lava",
+   "Magma",
+   "Tephra"
+  ],
+  "answer": 0,
+  "explain": "Beneath the surface it is called magma. Once it erupts it is lava, while tephra is the fragmented material thrown out by an eruption."
+ },
+ "01-11": {
+  "type": "event",
+  "year": "1693",
+  "title": "The Sicily earthquake",
+  "text": "A powerful earthquake, estimated at magnitude 7.4, destroyed dozens of towns in south-eastern Sicily. The cities were rebuilt in a late Baroque style, and many of them now form the UNESCO World Heritage Site known as the Late Baroque Towns of the Val di Noto."
+ },
+ "01-12": {
+  "type": "event",
+  "year": "2010",
+  "title": "The Haiti earthquake",
+  "text": "A magnitude 7.0 earthquake struck close to Port-au-Prince, on a fault system along the boundary of the Caribbean and North American plates. The rupture was shallow, which made the shaking especially destructive."
+ },
+ "01-13": {
+  "type": "fact",
+  "title": "Nearly two billion years in a mile",
+  "text": "The Colorado River has cut the Grand Canyon to more than a mile deep. At the bottom lie rocks over 1.7 billion years old, while the canyon itself was carved, by most estimates, in only the last five or six million years."
+ },
+ "01-14": {
+  "type": "quiz",
+  "q": "Which mineral makes up most of the sand on a typical beach?",
+  "options": [
+   "Quartz",
+   "Calcite",
+   "Gypsum"
+  ],
+  "answer": 0,
+  "explain": "Quartz is hard and chemically stable, so it outlasts softer minerals as rocks wear down into sand."
+ },
+ "01-15": {
+  "type": "event",
+  "year": "2022",
+  "title": "Hunga Tonga erupts",
+  "text": "The undersea volcano Hunga Tonga–Hunga Ha'apai in the South Pacific reached the climax of its eruption. Its plume rose about 58 kilometres, into the mesosphere, the highest volcanic plume ever recorded by satellites."
+ },
+ "01-16": {
+  "type": "fact",
+  "title": "Opal, silica and water",
+  "text": "Opal is made of tiny, orderly spheres of silica with water between them. The spheres split light into flashes of colour, and a stone can hold up to about a fifth of its weight in water."
+ },
+ "01-17": {
+  "type": "event",
+  "year": "1994 and 1995",
+  "title": "Two earthquakes, one date",
+  "text": "On January 17, 1994, a magnitude 6.7 earthquake struck Northridge, California, on a fault no one had known about. Exactly a year later a magnitude 6.9 earthquake hit Kobe, Japan. Each prompted a rethink of how cities prepare for strong shaking."
+ },
+ "01-18": {
+  "type": "quiz",
+  "q": "Where is the deepest known point in the ocean?",
+  "options": [
+   "The Puerto Rico Trench",
+   "The Mariana Trench",
+   "The Java Trench"
+  ],
+  "answer": 1,
+  "explain": "The Challenger Deep, in the Mariana Trench, lies almost 11 kilometres below the sea surface."
+ },
+ "01-19": {
+  "type": "fact",
+  "title": "The blue of the Renaissance",
+  "text": "Lapis lazuli has been mined in the mountains of Afghanistan for more than six thousand years. Ground into the pigment ultramarine, it was among the costliest colours available to Renaissance painters."
+ },
+ "01-20": {
+  "type": "quiz",
+  "q": "Which element is the most abundant in Earth's crust by weight?",
+  "options": [
+   "Silicon",
+   "Oxygen",
+   "Iron"
+  ],
+  "answer": 1,
+  "explain": "Oxygen makes up nearly half of the crust by weight, mostly locked inside silicate minerals. Silicon comes second."
+ },
+ "01-21": {
+  "type": "fact",
+  "title": "A boundary found by listening",
+  "text": "In 1909 the Croatian seismologist Andrija Mohorovičić studied a Balkan earthquake and noticed that seismic waves speed up at a certain depth. He had found the boundary between the crust and the mantle, now known as the Moho."
+ },
+ "01-22": {
+  "type": "quiz",
+  "q": "What kind of plate boundary is the San Andreas Fault?",
+  "options": [
+   "Divergent",
+   "Convergent",
+   "Transform"
+  ],
+  "answer": 2,
+  "explain": "At a transform boundary two plates slide horizontally past each other, here the Pacific and North American plates."
+ },
+ "01-23": {
+  "type": "event",
+  "year": "1973",
+  "title": "Eldfell erupts on Heimaey",
+  "text": "A fissure opened on the Icelandic island of Heimaey in the early hours, and nearly all of its 5,300 residents were evacuated within hours. In the following weeks crews pumped some seven million cubic metres of seawater onto the lava, and the flow stopped short of closing the harbour."
+ },
+ "01-24": {
+  "type": "event",
+  "year": "1848",
+  "title": "Gold at Sutter's Mill",
+  "text": "While building a sawmill for John Sutter in the foothills of the Sierra Nevada, James Marshall found gold. The discovery set off the California Gold Rush, and some three hundred thousand people travelled there in the years that followed."
+ },
+ "01-25": {
+  "type": "fact",
+  "title": "Where the coal comes from",
+  "text": "The Carboniferous period, from about 359 to 299 million years ago, takes its name from the coal laid down in its vast swamp forests. Much of the coal burned today began as plants from that time."
+ },
+ "01-26": {
+  "type": "event",
+  "year": "1700",
+  "title": "The Cascadia earthquake",
+  "text": "A giant earthquake, estimated at about magnitude 9, ruptured the Cascadia subduction zone off the Pacific Northwest at around nine in the evening. Its date is known from an orphan tsunami recorded in Japan and from drowned coastal forests."
+ },
+ "01-27": {
+  "type": "quiz",
+  "q": "Which scale is most widely used today to express the size of large earthquakes?",
+  "options": [
+   "The Mohs scale",
+   "The moment magnitude scale",
+   "The Beaufort scale"
+  ],
+  "answer": 1,
+  "explain": "Moment magnitude is based on the energy released at the fault. It replaced the Richter scale for large earthquakes."
+ },
+ "01-28": {
+  "type": "fact",
+  "title": "Corals that kept a calendar",
+  "text": "Fossil corals grew a faint line each day. Counting them shows that around 400 million years ago a year held roughly 400 days, because the Earth spun faster and a day lasted about 22 hours."
+ },
+ "01-29": {
+  "type": "quiz",
+  "q": "Which Italian volcano buried the Roman town of Pompeii?",
+  "options": [
+   "Etna",
+   "Vesuvius",
+   "Stromboli"
+  ],
+  "answer": 1,
+  "explain": "Vesuvius erupted in AD 79, burying Pompeii and nearby Herculaneum under ash and pumice."
+ },
+ "01-30": {
+  "type": "fact",
+  "title": "A summit made of sea floor",
+  "text": "The summit of Mount Everest is made of marine limestone that contains the fossils of sea creatures. The rock formed on an ancient sea floor and now stands nearly nine kilometres above sea level, lifted by the collision of India and Asia."
+ },
+ "01-31": {
+  "type": "quiz",
+  "q": "In which kind of rock are fossils most commonly found?",
+  "options": [
+   "Igneous",
+   "Sedimentary",
+   "Metamorphic"
+  ],
+  "answer": 1,
+  "explain": "Sedimentary layers bury organisms gently, whereas the heat and pressure of the other rock types usually destroy them."
+ }
+};
+
+/* ------------------------------------------------------------------
+   DAILY SELECTION
+   The same date always produces the same card, for everyone.
+------------------------------------------------------------------ */
+const PREVIEW_UI = false;
+
+function hash(n) {
+  n = (n ^ 61) ^ (n >>> 16);
+  n = n + (n << 3);
+  n = n ^ (n >>> 4);
+  n = Math.imul(n, 0x27d4eb2d);
+  n = n ^ (n >>> 15);
+  return n >>> 0;
+}
+function dayNumber(d) {
+  return Math.floor(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 86400000);
+}
+function pick(d) {
+  const mmdd = String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  if (CALENDAR[mmdd]) return { kind: CALENDAR[mmdd].type, item: CALENDAR[mmdd] };
+  if (EVENTS[mmdd]) return { kind: "event", item: EVENTS[mmdd] };
+  const n = dayNumber(d);
+  const isQuiz = hash(n) % 5 < 2;
+  const list = isQuiz ? QUIZ : FACTS;
+  const idx = hash(n + (isQuiz ? 7 : 3)) % list.length;
+  return { kind: isQuiz ? "quiz" : "fact", item: list[idx] };
+}
+function forcedPick(kind) {
+  if (kind === "event") return { kind, item: EVENTS["05-18"], date: new Date(2026, 4, 18) };
+  if (kind === "quiz") return { kind, item: QUIZ[3] };
+  return { kind: "fact", item: FACTS[0] };
+}
+function esc(s) {
+  return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+}
+
+/* ------------------------------------------------------------------
+   RENDER
+------------------------------------------------------------------ */
+let FORCED = null;
+let OVERRIDE_DATE = null;
+
+// Everything has to fit on one screen: shrink the whole page a little at a time until it does.
+function fitPage() {
+  const root = document.documentElement;
+  const over = () => root.scrollHeight > window.innerHeight + 1;
+  let g = 1, sc = 1;
+  root.style.setProperty("--g", g);
+  root.style.setProperty("--s", sc);
+  // 1) tighten the spacing first
+  while (over() && g > 0.3) {
+    g = Math.round((g - 0.05) * 100) / 100;
+    root.style.setProperty("--g", g);
+  }
+  // 2) only then make the text a little smaller
+  while (over() && sc > 0.6) {
+    sc = Math.round((sc - 0.03) * 100) / 100;
+    root.style.setProperty("--s", sc);
+  }
+}
+function layout() {
+  document.documentElement.style.setProperty("--s", 1);
+  document.documentElement.style.setProperty("--g", 1);
+  fitTitle();
+  fitPage();
+}
+
+// Titles longer than two lines step down by 8pt so they stay compact.
+function fitTitle() {
+  const h = document.querySelector("#card h1");
+  if (!h) return;
+  h.classList.remove("long");
+  const lh = parseFloat(getComputedStyle(h).lineHeight);
+  if (lh && h.getBoundingClientRect().height / lh > 2.5) h.classList.add("long");
+}
+
+function render() {
+  const params = new URLSearchParams(location.search);
+  let d = OVERRIDE_DATE ? new Date(OVERRIDE_DATE.getTime()) : new Date();
+  const pd = params.get("date");
+  if (pd && /^\d{4}-\d{2}-\d{2}$/.test(pd)) {
+    const [y, m, dd] = pd.split("-").map(Number);
+    d = new Date(y, m - 1, dd);
+  }
+  let sel = pick(d);
+  const fk = FORCED || params.get("kind") || window.FORCED_KIND;
+  if (fk) { sel = forcedPick(fk); if (sel.date) d = sel.date; }
+  const { kind, item } = sel;
+
+  document.getElementById("date").textContent =
+    d.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
+  document.getElementById("dedication").textContent = DEDICATION;
+
+  const card = document.getElementById("card");
+  card.dataset.kind = kind;
+  const labels = { fact: "Fun fact", event: "On this day", quiz: "Quiz", birthday: "Happy birthday" };
+  const pill = '<div class="meta"><span class="kind ' + kind + '">' + labels[kind] + "</span></div>";
+
+  if (kind === "fact" || kind === "birthday") {
+    card.innerHTML =
+      '<div class="hd">' + pill + "<h1>" + esc(item.title) + "</h1></div>" +
+      '<div class="bd"><p class="body">' + esc(item.text) + "</p></div>";
+  } else if (kind === "event") {
+    card.innerHTML =
+      '<div class="hd">' + pill + '<p class="year">' + esc(item.year) + "</p>" +
+      "<h1>" + esc(item.title) + "</h1></div>" +
+      '<div class="bd"><p class="body">' + esc(item.text) + "</p></div>";
+  } else {
+    const letters = ["A", "B", "C", "D"];
+    card.innerHTML =
+      '<div class="hd">' + pill + "<h1>" + esc(item.q) + "</h1></div>" +
+      '<div class="bd"><ul class="options">' +
+      item.options.map((o, i) =>
+        '<li><button data-i="' + i + '"><span class="letter">' + letters[i] + "</span><span>" + esc(o) + "</span></button></li>"
+      ).join("") +
+      '</ul><p class="explain" id="explain"><span class="verdict" id="verdict">Correct</span>' + esc(item.explain) + "</p></div>";
+    const buttons = card.querySelectorAll("button");
+    buttons.forEach(b => b.addEventListener("click", () => {
+      const chosen = Number(b.dataset.i);
+      buttons.forEach(x => (x.disabled = true));
+      buttons[item.answer].classList.add("correct");
+      if (chosen !== item.answer) b.classList.add("wrong");
+      document.getElementById("verdict").textContent = chosen === item.answer ? "Correct" : "Not quite";
+      document.getElementById("explain").classList.add("show");
+    }));
+  }
+  card.style.animation = "none"; void card.offsetWidth; card.style.animation = "";
+  layout();
+}
+
+if (PREVIEW_UI) {
+  const bar = document.createElement("div");
+  bar.className = "pv";
+  bar.innerHTML = '<span>Preview</span><button data-k="fact">Fun fact</button><button data-k="quiz">Quiz</button><button data-k="event">On this day</button>';
+  document.body.insertBefore(bar, document.body.firstChild);
+  document.body.classList.add("pv-on");
+  bar.addEventListener("click", e => {
+    const k = e.target.dataset && e.target.dataset.k;
+    if (k) { FORCED = k; render(); }
+  });
+}
+render();
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
+window.addEventListener("resize", layout);
+window.addEventListener("orientationchange", layout);
+
+</script>
+
+
+</body></html>
